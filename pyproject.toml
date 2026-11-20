@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "hand-gesture-recognition"
+version = "0.1.0"
+description = "Real-Time Hand Gesture Detection and Recognition System using MediaPipe Tasks and Scikit-Learn"
+authors = ["Senior Vision Engineer <engineer@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mediapipe = "^0.10.14"
+opencv-python = "^4.9.0"
+numpy = "^1.26.4,<2.0.0"
+scikit-learn = "^1.4.2"
+pandas = "^2.2.2"
+matplotlib = "^3.8.4"
+joblib = "^1.4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+ruff = "^0.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort imports
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501", # line too long (handled by formatter)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra -q"

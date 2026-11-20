@@ -1,0 +1,47 @@
+{
+  "saved_at": "2026-11-19T19:56:47.285972+00:00",
+  "n_features_in": 88,
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "label_names": [
+    "Open Palm",
+    "Closed Fist",
+    "Thumbs Up",
+    "Peace Sign",
+    "One Finger",
+    "Three Fingers",
+    "Four Fingers",
+    "Five Fingers",
+    "OK Sign",
+    "Stop Gesture"
+  ],
+  "n_estimators": 100,
+  "max_depth": 20,
+  "dataset_path": "/Users/sandesh/personal-projects/hand-gesture-recognition/data/processed/gestures_dataset.csv",
+  "total_samples": 1000,
+  "train_samples": 800,
+  "test_samples": 200,
+  "test_accuracy": 0.785,
+  "classes_evaluated": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}
